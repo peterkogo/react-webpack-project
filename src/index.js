@@ -1,14 +1,21 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-
+import ReactDOM from "react-dom";
 import App from "./App";
+
 import "./style.css";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-
-root.render(
+// React 17
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
+
+// React 18
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
